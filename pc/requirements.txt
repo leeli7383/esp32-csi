@@ -1,0 +1,5 @@
+# Validated with Python 3.11.9. Install GUI dependencies separately from firmware tools.
+numpy==2.4.4
+PyQt5==5.15.11
+pyqtgraph==0.14.0
+pyserial==3.5

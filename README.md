@@ -16,6 +16,7 @@
 ```text
 esp32_recv/              接收节点固件、采集工具、协议测试和历史文档
 esp32_send/              发送节点固件、采集工具、协议测试和历史文档
+pc/                     PC 运动评分单图上位机、依赖和合成回放示例
 docs/ARCHITECTURE.md     当前实现、数据流和合并决策
 docs/source-manifest.json 原始导入文件的 SHA256，供溯源
 requirements.txt        电脑串口采集依赖
@@ -56,6 +57,12 @@ python esp32_recv/tools/capture_csi.py --input captures/recv.bin --output captur
 XCOM 设置 921600、8N1、无流控、关闭 RTS/DTR。发送 `TEXT` 加真实换行查看原始 int8 数组，`BINARY` 加换行恢复 CRC 校验的 CSI1 二进制协议，`STATUS` 加换行立即查看状态。默认每秒输出 `#CSI_STATUS`；`stage=running error=0x0` 表示初始化完成。采集脚本会自动请求 BINARY 模式。
 
 协议详见 [RAW_CSI_USB.md](esp32_recv/docs/RAW_CSI_USB.md)。两节点时间戳来自各自启动时钟，未经同步，不能直接按绝对时间对齐。
+
+## PC 运动评分上位机
+
+用户提供的 `pc/csi_upper_pc_min.py` 已收录，显示 motion_score、触发/恢复阈值和 PASS/CLEAR，支持串口及离线文本回放。安装、示例、输入协议和算法差异见 [PC 上位机说明](pc/README.md)。
+
+**兼容性：**此程序是旧版 13 列 `CSI_DATA` CSV 输入的单图版，不是此前视频中的六图版，也不能直接读取当前固件的 CSI1 二进制、键值 TEXT 或采集工具的 JSONL。当前固件数据仍请使用上文采集工具；GUI 协议适配尚未实现。
 
 ## 软件检查
 
