@@ -26,6 +26,8 @@ PROGRESS.md             验证结果、问题和下一步
 
 安装 PlatformIO Core（或 VS Code PlatformIO 扩展）。平台已锁定 `espressif32@6.13.0`，其配套 ESP-IDF 为 5.5.3。以下命令均在仓库根目录执行，串口号请按实际设备替换：
 
+Windows 下请将仓库检出到纯英文路径（例如 `D:\projects\esp32-csi`）。本次验证发现包含中文用户名的路径会触发 ESP-IDF Kconfig 路径编码错误；同一提交在纯英文目录可继续编译。
+
 ```powershell
 pio run -d esp32_recv -e esp32-c6-devkitm-1
 pio run -d esp32_send -e esp32-c6-devkitm-1

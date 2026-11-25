@@ -22,7 +22,7 @@
 ### 固件编译与环境
 
 - 原记录的 `C:\.platformio` 已不存在；新建 `D:\CodexTools\platformio` 隔离工具环境，不修改原项目。
-- PlatformIO Core 6.2.0 与 Espressif32 6.13.0 已安装；完整构建状态待本阶段最终更新。
+- PlatformIO Core 6.2.0、Espressif32 6.13.0、ESP-IDF 5.5.3 与 RISC-V GCC 14.2.0 已安装。
 - 下载来源、用途和安装位置已记入本机 `D:\CodexTools\downloads.json`，工具及缓存不入库。
 - 尚未烧录或连接实体板，未进行无线、LED、帧率、Flash ID 或长期稳定性实测。
 
@@ -36,5 +36,26 @@
 ### GitHub 交接
 
 - 已通过连接器和本机 Git 凭据交叉确认个人账号为 `leeli7383`。
-- 计划仓库：`https://github.com/leeli7383/esp32-csi`，公开；创建前查询未发现同名仓库。
+- 仓库：`https://github.com/leeli7383/esp32-csi`，公开；创建前查询未发现同名仓库。
+- 首次提交 `730026e2374ecbbcc9e5c8466fd805d28e0167bc` 已推送，远程 SHA 与本地一致。首次直连推送遇到连接重置；使用本机既有 FlClash HTTP 代理后成功，未修改全局 Git 配置。
 - 分支：`main`。提交编号与最终推送结果由交付消息给出，避免在提交内记录自身编号。
+
+## 2026-11-25：完整构建验证与环境交接
+
+在纯英文目录 `D:\CodexTools\platformio\validation\esp32-csi` 本地克隆已提交版本 `730026e` 后，从无构建缓存状态分别构建两端。验证副本的 Git 跟踪文件无修改，未替换 sdkconfig，也未修改业务代码。
+
+| 工程 | 结果 | RAM | Flash / 1MiB 应用分区 |
+| --- | --- | --- | --- |
+| esp32_recv | SUCCESS | 158188 / 327680 字节（48.3%） | 863752 / 1048576 字节（82.4%） |
+| esp32_send | SUCCESS | 158028 / 327680 字节（48.2%） | 848562 / 1048576 字节（80.9%） |
+
+实际命令为隔离环境的 `python -m platformio run -d <各工程目录> -e esp32-c6-devkitm-1`（由本机辅助脚本设置 PLATFORMIO_CORE_DIR 和网络读取超时后调用相同入口）。编译器、链接器和镜像生成均完成。完整日志留在本次工作目录，不将大量本机路径和构建日志推送入库。
+
+环境问题及处理：
+
+- 包含中文用户名的 C 盘路径在 Kconfig 阶段出现路径乱码及文件找不到；同一提交在上述纯英文路径构建成功。README 已增加 Windows 路径要求。
+- 初次工具下载缓慢，设置读取超时后重试完成；工具、IDF 专用 Python 环境及依赖位于 `D:\CodexTools\platformio`，原 E 盘工程保持不变。
+- 两端均有 `Expected 4MB, found 2MB` 配置警告；镜像生成命令使用板定义的 `--flash_size 4MB`，有效 sdkconfig 仍为 2MB。构建成功没有消除该冲突，烧录前应按实体 Flash ID 统一。
+- 两端协议测试 10/10 均通过；软件验证不代替板上射频、灯态、检测效果和长期稳定性实测。
+
+此阶段只补充构建结果和路径说明，固件源码与已验证的首次提交一致。文档检查通过后提交并推送 `main`；最终同步状态以交付消息为准。
