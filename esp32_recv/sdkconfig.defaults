@@ -1,0 +1,11 @@
+# Enable Wi-Fi CSI for CSI receive functionality
+CONFIG_ESP_WIFI_CSI_ENABLED=y
+CONFIG_ESP32_WIFI_CSI_ENABLED=y
+
+# Flash size: use 4MB to match the board
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+
+# Dedicated CSI transport (native USB by default); no console output.
+CONFIG_ESP_CONSOLE_NONE=y
+CONFIG_ESP_CONSOLE_SECONDARY_NONE=y
+CONFIG_FREERTOS_HZ=1000

@@ -1,0 +1,24 @@
+# Build products, local editor state and Python caches
+**/.pio/
+**/.vscode/
+**/build/
+**/__pycache__/
+*.py[cod]
+*.log
+sdkconfig.old
+sdkconfig.*.old
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+# Local CSI recordings; keep measured data out of the source repository
+captures/
+*.bin
+*.elf
+*.jsonl
+*.csv
+.DS_Store
+Thumbs.db

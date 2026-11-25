@@ -1,0 +1,158 @@
+{
+  "date": "2026-11-25",
+  "description": "SHA256 of original imported files before documented integration edits; original directories remain unchanged.",
+  "files": [
+    {
+      "path": "esp32_recv/.gitignore",
+      "source_sha256": "d952abf002d5e1ec80c8ab1bfc9f38eb5b62fc310667d501cb2ce9f21c3effb2"
+    },
+    {
+      "path": "esp32_recv/CMakeLists.txt",
+      "source_sha256": "2df09d74c1b4eeb08719500f9912ec95d1091301853a4ffd67d1c1e2cb58d6f5"
+    },
+    {
+      "path": "esp32_recv/docs/PROJECT_HANDOVER.md",
+      "source_sha256": "4365bf91f8472c9e86286121f1df30be7c3001ff349eabc3c0efc487fe72ca8b"
+    },
+    {
+      "path": "esp32_recv/docs/RAW_CSI_USB.md",
+      "source_sha256": "0509e6d013127b2343e0faf67f64e29760bf8e861a4126d1a33c730a8ccfbc31"
+    },
+    {
+      "path": "esp32_recv/include/README",
+      "source_sha256": "dc6d9be88119a80edf773eb5a659f4470caf81ed5e95dbfd0cd3c7a9686ccd8c"
+    },
+    {
+      "path": "esp32_recv/lib/README",
+      "source_sha256": "9e753e4bef2bb4c7a3784561f50d0c42ceb7bd0c65f183e73209e86ec9892192"
+    },
+    {
+      "path": "esp32_recv/platformio.ini",
+      "source_sha256": "2c416d0d57c99f0223e71b4f05cd2ac68e39ae9922238ebd807f5bc8fa224d76"
+    },
+    {
+      "path": "esp32_recv/README.md",
+      "source_sha256": "41130dea45b45875bf91ce90c1ed124436ffc957158144d501ce02e5302d8709"
+    },
+    {
+      "path": "esp32_recv/sdkconfig.defaults",
+      "source_sha256": "dfefc0ab9f56530a49ac46696e4e208e7b2890d846dff738d33b669c0d0fe598"
+    },
+    {
+      "path": "esp32_recv/sdkconfig.esp32-c6-devkitm-1",
+      "source_sha256": "845d23a9800020ee64efaf94cf36901b0e18c05e5482fc3f9343efbb3a8fa45b"
+    },
+    {
+      "path": "esp32_recv/src/CMakeLists.txt",
+      "source_sha256": "188dadde2ff3d83ba91e5b1a6683571092d836c4b130399a44f43469b882a522"
+    },
+    {
+      "path": "esp32_recv/src/csi_stream.c",
+      "source_sha256": "10e5d07f571850368a86564bd2f337609f17b31a12b3e5215a80a94cbe5fbbb0"
+    },
+    {
+      "path": "esp32_recv/src/csi_stream.h",
+      "source_sha256": "1a0793df65e6626561c7c3a0c7d18d257daf7aa84867b8e33714dd050f0aa3c2"
+    },
+    {
+      "path": "esp32_recv/src/main.c",
+      "source_sha256": "52b1b9fbe7cd9016b09bf7709e2edef02ceb541a145d780d3165cd8d6488d4bd"
+    },
+    {
+      "path": "esp32_recv/src/motion_core.c",
+      "source_sha256": "b28455046c54be81a6a8e469e828d7e3aaea8cd3fd9129daecbf7cfac901eb73"
+    },
+    {
+      "path": "esp32_recv/src/motion_core.h",
+      "source_sha256": "03fa8199b0554a1ef78740eb06e3d97129b5d6019892cdbf69eac8d6fd3c8ac4"
+    },
+    {
+      "path": "esp32_recv/test/README",
+      "source_sha256": "95291bce496cd8b6f92ab6f9359119d77f02fc22eec7047cc38cc818a38c2b5d"
+    },
+    {
+      "path": "esp32_recv/test/test_capture_csi.py",
+      "source_sha256": "66132386e244486312e37f0b705fa9365fc06514561c08b1a2046e7271589d64"
+    },
+    {
+      "path": "esp32_recv/tools/capture_csi.py",
+      "source_sha256": "8dd633cc90793cf16de6a362cd313c545a1137ffff094546b3359edd5a437d05"
+    },
+    {
+      "path": "esp32_send/.gitignore",
+      "source_sha256": "d952abf002d5e1ec80c8ab1bfc9f38eb5b62fc310667d501cb2ce9f21c3effb2"
+    },
+    {
+      "path": "esp32_send/CMakeLists.txt",
+      "source_sha256": "c35e075976a62c3ca6500d429a05d891d07f1f93628f1eabec95ad7abe2a3c4f"
+    },
+    {
+      "path": "esp32_send/docs/PROJECT_HANDOVER.md",
+      "source_sha256": "4365bf91f8472c9e86286121f1df30be7c3001ff349eabc3c0efc487fe72ca8b"
+    },
+    {
+      "path": "esp32_send/docs/RAW_CSI_USB.md",
+      "source_sha256": "0509e6d013127b2343e0faf67f64e29760bf8e861a4126d1a33c730a8ccfbc31"
+    },
+    {
+      "path": "esp32_send/include/README",
+      "source_sha256": "dc6d9be88119a80edf773eb5a659f4470caf81ed5e95dbfd0cd3c7a9686ccd8c"
+    },
+    {
+      "path": "esp32_send/lib/README",
+      "source_sha256": "9e753e4bef2bb4c7a3784561f50d0c42ceb7bd0c65f183e73209e86ec9892192"
+    },
+    {
+      "path": "esp32_send/platformio.ini",
+      "source_sha256": "c8e5d01dc0614ffc573e957011c6d1a1b41ab2cd27b4094849da1dbfc2af1d33"
+    },
+    {
+      "path": "esp32_send/README.md",
+      "source_sha256": "19c34ba588bcd09caa0afcde1789d0f3b2e91d8146ce23fa66ce3e6280824012"
+    },
+    {
+      "path": "esp32_send/sdkconfig.defaults",
+      "source_sha256": "e96b942f3bebb9aa3e0b2091a6da325ee7aaa5c7f21bb11029c5a8413cfab307"
+    },
+    {
+      "path": "esp32_send/sdkconfig.esp32-c6-devkitm-1",
+      "source_sha256": "845d23a9800020ee64efaf94cf36901b0e18c05e5482fc3f9343efbb3a8fa45b"
+    },
+    {
+      "path": "esp32_send/src/CMakeLists.txt",
+      "source_sha256": "188dadde2ff3d83ba91e5b1a6683571092d836c4b130399a44f43469b882a522"
+    },
+    {
+      "path": "esp32_send/src/csi_stream.c",
+      "source_sha256": "10e5d07f571850368a86564bd2f337609f17b31a12b3e5215a80a94cbe5fbbb0"
+    },
+    {
+      "path": "esp32_send/src/csi_stream.h",
+      "source_sha256": "1a0793df65e6626561c7c3a0c7d18d257daf7aa84867b8e33714dd050f0aa3c2"
+    },
+    {
+      "path": "esp32_send/src/main.c",
+      "source_sha256": "4b56a1748d0fdf84210be5a3b0954c63c252788ee287f1de5b8f0403c00fdf05"
+    },
+    {
+      "path": "esp32_send/src/motion_core.c",
+      "source_sha256": "7299ffc9a916e9173bb46d273b0a7c2c1fa1875662f10c282d542c0f0005eb59"
+    },
+    {
+      "path": "esp32_send/src/motion_core.h",
+      "source_sha256": "98000d1b56d944a63af48b5daa8beb5c597e11cb55b0847bcb7c891a7e29f1ba"
+    },
+    {
+      "path": "esp32_send/test/README",
+      "source_sha256": "95291bce496cd8b6f92ab6f9359119d77f02fc22eec7047cc38cc818a38c2b5d"
+    },
+    {
+      "path": "esp32_send/test/test_capture_csi.py",
+      "source_sha256": "66132386e244486312e37f0b705fa9365fc06514561c08b1a2046e7271589d64"
+    },
+    {
+      "path": "esp32_send/tools/capture_csi.py",
+      "source_sha256": "8dd633cc90793cf16de6a362cd313c545a1137ffff094546b3359edd5a437d05"
+    }
+  ]
+}
